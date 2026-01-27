@@ -1,0 +1,391 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ----------------------------------- theme colors */
+:root {
+  --mark-color-1: #45b05d;
+  --body-bg: #fff;
+   /* --body-bg-dark: #282c33; */
+   --body-bg-dark: #151515;
+  --font-color: black;
+  --font-color-light:#fff;
+  /*  google fonts */
+  --SmoochSans: "Smooch Sans", sans-serif;
+  --Ubuntu: "Ubuntu", sans-serif;
+}
+.theme-dark {
+  color: var(--font-color-light);
+  background: var(--body-bg-dark);
+}
+.theme-light {
+  color: var(--font-color);
+  background: var(--body-bg);
+}
+.theme-dark a,
+.theme-light a {
+  color: inherit;
+}
+/* ----------------------------------- global styling */
+a {
+  text-decoration: none;
+}
+.flex-row {
+  display: flex;
+}
+.flex-space-between {
+  justify-content: space-evenly;
+}
+.dot {
+  width: 2px;
+  height: 2px;
+  background: var(--font-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0.7rem;
+}
+.welcomeInfoDotBox {
+  width: fit-content;
+  position: absolute;
+  bottom: 2rem;
+  left: 15rem;
+}
+.rectangle-box {
+  border: 1px solid var(--font-color);
+}
+li {
+  list-style-type: none;
+}
+#mainContainer {
+  margin: 0 4rem;
+}
+.hashMark {
+  color: var(--mark-color-1);
+  font-size: 1.5rem;
+  margin-right: 0.2rem;
+  font-weight: 900;
+}
+.color-white {
+  color: var(--font-color);
+}
+.box-container {
+  margin: 0.5rem 1.5rem;
+}
+/* ----------------------------------- Header */
+header#header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0rem;
+}
+#logo a {
+  color: var(--font-color);
+  font-size: 1.5rem;
+}
+#nav-links {
+  display: flex;
+}
+#nav-links li {
+  padding: 0 0.5rem;
+}
+#nav-links li a {
+  font-size: 1.5rem;
+  font-family: var(--SmoochSans);
+}
+
+/* ----------------------------------- welcome info */
+#welcome-info {
+  display: flex;
+  justify-content: space-between;
+}
+#welcome-info #pic img {
+  height: 350px;
+  width: 350px;
+  border-radius: 5px 5px 0px 0px;
+}
+#welcome-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--Ubuntu);
+}
+#welcome-info-content > button {
+  align-self: flex-start;
+}
+#welcome-info-content > p {
+  font-size: 2rem;
+}
+#contact-me-btn {
+  background: transparent;
+  border: 1px solid var(--mark-color-1);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  color: inherit;
+}
+#pic {
+  position: relative;
+}
+#contact-me-btn a {
+  font-family: var(--SmoochSans);
+}
+#working-marker {
+  border: 1px solid var(--font-color);
+  padding: 0.2rem;
+  display: flex;
+  font-family: var(--SmoochSans);
+}
+#working-marker > span {
+  height: 15px;
+  width: 15px;
+  background: var(--mark-color-1);
+  display: block;
+  margin: 0 0.5rem;
+  position: relative;
+  top: 2px;
+}
+.welcomeInfoDivLock {
+  position: relative;
+  right: 9rem;
+  z-index: -1;
+  top: 14rem;
+}
+/* ----------------------------------- skills */
+#skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#skills-list {
+  display: flex;
+}
+.skill-list-box {
+  border: 1px solid var(--font-color);
+  margin: 0.5rem;
+}
+.skill-list-box-heading {
+  color: var(--mark-color-1);
+}
+#skills-list ul li {
+  padding: 0.3rem 0.5rem;
+  font-family: var(--Ubuntu);
+}
+#skills-design {
+  padding: 1rem;
+}
+/* ----------------------------------- about */
+#about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#download-resume-btn {
+  border: 1px solid var(--mark-color-1);
+  background: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  color: inherit;
+}
+#about-content {
+  font-family: var(--Ubuntu);
+}
+.aboutRectangleBox1 {
+  position: absolute;
+}
+.aboutRectangleBox2 {
+  position: absolute;
+  left: 15rem;
+  top: 5rem;
+}
+.aboutRectangleBox3 {
+  position: absolute;
+  left: 30rem;
+  top: 15rem;
+}
+#aboutImage {
+  background: url("../images/welcomeInfo.png");
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+@media screen and (max-width: 1050px) {
+  #about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #aboutImage {
+    height: 400px;
+  }
+  .aboutRectangleBox3 {
+    left: 25rem;
+  }
+  .aboutRectangleBox1 {
+    top: 2rem;
+  }
+  .aboutRectangleBox2 {
+    left: 13rem;
+    top: 9rem;
+  }
+}
+/* ----------------------------------- Contact */
+#contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: var(--Ubuntu);
+  position: relative;
+  grid-gap: 1rem;
+}
+#message-me-box {
+  border: 1px solid var(--font-color);
+  padding: 1rem;
+}
+.contactRectDot {
+  position: absolute;
+  left: -4rem;
+  bottom: -1rem;
+}
+/* ----------------------------------- Projects */
+#projects {
+  margin-top: 4rem;
+}
+/* -------- Major Projects */
+#major-projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 1050px) {
+  #major-projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#major-projects-container > div {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.usedTechnologies {
+  padding: 0.4rem 0.5rem;
+  font-family: var(--SmoochSans);
+}
+.projectDetails {
+  padding: 1rem;
+}
+.projectName {
+  color: var(--mark-color-1);
+  font-family: var(--Ubuntu);
+}
+.projectDescription {
+  margin-top: 0.5rem;
+  font-family: var(--SmoochSans);
+}
+.project-btns {
+  padding: 0 3rem;
+  margin-top: 1rem;
+}
+.project-btns a {
+  display: inline-block;
+  padding: 0.4rem 1.6rem;
+  border: 1px solid var(--font-color);
+  margin: 0.5rem;
+  font-family: var(--SmoochSans);
+  font-size: 0.7rem;
+}
+/* -------- Minor Projects */
+#minor-projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 1050px) {
+  #minor-projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#minor-projects-container > div {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin: 0.5rem;
+}
+.minor-project-used-technologies {
+  padding: 0.4rem 0.5rem;
+  font-family: var(--SmoochSans);
+}
+.minor-project-detail {
+  padding: 1rem;
+}
+.minor-project-name {
+  color: var(--mark-color-1);
+  font-family: var(--Ubuntu);
+}
+.minor-project-description {
+  margin: 1rem 0;
+  font-family: var(--SmoochSans);
+}
+.minor-project-git-repo {
+  border: 1px solid var(--font-color);
+  padding: 0.3rem 1.5rem;
+  font-family: var(--SmoochSans);
+  font-size: 0.7rem;
+}
+/* --------------------- articles */
+#articles-container{
+  display: flex;;
+}
+#articles-container>div{
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin: 0.5rem;
+}
+/* -------------------- section header */
+.section-header {
+  margin: 3rem 0;
+}
+.sectionMarkLine {
+  min-width: 400px;
+  height: 2px;
+  display: inline-block;
+  background: var(--mark-color-1);
+  margin-left: 1rem;
+  position: relative;
+  bottom: 2px;
+}
+.secionName {
+  font-size: 1.2rem;
+  font-family: var(--SmoochSans);
+}
+/* --------------- footer */
+#footer {
+  border-top: 1px solid var(--font-color);
+  margin-top: 3rem;
+  padding: 2rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* ------------- Scroll To Top*/
+#scrollToTopBtn{
+  cursor: pointer;
+}
+
+/* ------------- Articles Section */
+#articles{
+  margin-top: 4rem;
+}
+.article-card{
+
+}
+.article-title{
+  color: var(--mark-color-1);
+  font-family: var(--Ubuntu);
+}
+.article-descriptiom{
+  margin: 1rem 0;
+  font-family: var(--SmoochSans);
+}
+.article-readbtn{
+  border: 1px solid var(--font-color);
+  padding: 0.3rem 1.5rem;
+  font-family: var(--SmoochSans);
+  font-size: 0.7rem;
+}
+.article-readbtn i{
+color: var(--mark-color-1);
+}
