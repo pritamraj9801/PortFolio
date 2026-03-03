@@ -17,10 +17,10 @@ export default function WelcomeInfo() {
         </button>
       </div>
       <div>
-        <DivLock class="welcomeInfoDivLock" />
+        <DivLock classNameProp="welcomeInfoDivLock" />
         <div id="pic">
             <img src="/images/welcomeInfo.png" alt="Welcome Info" />
-             <RectangularDots rows="4" cols="4" class="welcomeInfoDotBox" />
+             <RectangularDots rows="4" cols="4" classNameProp="welcomeInfoDotBox" />
           <div id="working-marker">
             <span></span>Currently Working On PortFolio
           </div>

@@ -9,13 +9,14 @@ body {
 :root {
   --mark-color-1: #45b05d;
   --body-bg: #fff;
-   /* --body-bg-dark: #282c33; */
-   --body-bg-dark: #151515;
+  /* --body-bg-dark: #282c33; */
+  --body-bg-dark: #151515;
   --font-color: black;
-  --font-color-light:#fff;
+  --font-color-light: #fff;
   /*  google fonts */
   --SmoochSans: "Smooch Sans", sans-serif;
   --Ubuntu: "Ubuntu", sans-serif;
+  --Quicksand: "Quicksand", sans-serif;
 }
 .theme-dark {
   color: var(--font-color-light);
@@ -189,7 +190,7 @@ header#header {
   color: inherit;
 }
 #about-content {
-  font-family: var(--Ubuntu);
+  font-family: var(--Quicksand);
 }
 .aboutRectangleBox1 {
   position: absolute;
@@ -261,8 +262,10 @@ header#header {
   }
 }
 #major-projects-container > div {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin: 0.5rem;
 }
 .usedTechnologies {
   padding: 0.4rem 0.5rem;
@@ -302,7 +305,8 @@ header#header {
   }
 }
 #minor-projects-container > div {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin: 0.5rem;
 }
@@ -328,12 +332,15 @@ header#header {
   font-size: 0.7rem;
 }
 /* --------------------- articles */
-#articles-container{
-  display: flex;;
+#articles-container {
+  display: flex;
 }
-#articles-container>div{
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    margin: 0.5rem;
+#articles-container > div {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin: 0.5rem;
+  padding: 1rem;
 }
 /* -------------------- section header */
 .section-header {
@@ -361,31 +368,30 @@ header#header {
   grid-template-columns: repeat(2, 1fr);
 }
 /* ------------- Scroll To Top*/
-#scrollToTopBtn{
+#scrollToTopBtn {
   cursor: pointer;
 }
 
 /* ------------- Articles Section */
-#articles{
+#articles {
   margin-top: 4rem;
 }
-.article-card{
-
+.article-card {
 }
-.article-title{
+.article-title {
   color: var(--mark-color-1);
   font-family: var(--Ubuntu);
 }
-.article-descriptiom{
+.article-descriptiom {
   margin: 1rem 0;
   font-family: var(--SmoochSans);
 }
-.article-readbtn{
+.article-readbtn {
   border: 1px solid var(--font-color);
   padding: 0.3rem 1.5rem;
   font-family: var(--SmoochSans);
   font-size: 0.7rem;
 }
-.article-readbtn i{
-color: var(--mark-color-1);
+.article-readbtn i {
+  color: var(--mark-color-1);
 }

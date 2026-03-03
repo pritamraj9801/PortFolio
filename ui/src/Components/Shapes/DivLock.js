@@ -1,7 +1,7 @@
 
 export default function DivLock(props) {
   return (
-    <div className={props.class}>
+    <div className={props.classNameProp}>
       <svg
         width="200"
         height="200"
@@ -15,7 +15,7 @@ export default function DivLock(props) {
           height="100"
           stroke="#45b05d"
           fill="none"
-          stroke-width="1"
+          strokeWidth="1"
         />
         <rect
           x="75"
@@ -24,7 +24,7 @@ export default function DivLock(props) {
           height="100"
           stroke="#45b05d"
           fill="none"
-          stroke-width="1"
+          strokeWidth="1"
         />
         <rect
           x="75"
@@ -33,7 +33,7 @@ export default function DivLock(props) {
           height="50"
           stroke="#45b05d"
           fill="none"
-          stroke-width="1"
+          strokeWidth="1"
         />
       </svg>
     </div>

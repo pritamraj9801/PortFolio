@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import minorProjects from "../Data/minorProjectsData";
+import majorProjects from "../Data/majorProjectsData";
 import SectionHeader from "./SectionHeader";
 export default function Projects() {
-  const [majorProjects, setMajorProjects] = useState([]);
-  const [minorProjects, setMinorProjects] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:3001/api/GetMajorProjects")
-      .then((res) => res.json())
-      .then((data) => setMajorProjects(data))
-      .catch((err) => console.error("Error fetching projects:", err));
-  }, []);
-  useEffect(() => {
-    fetch("http://localhost:3001/api/GetMinorProjects")
-      .then((res) => res.json())
-      .then((data) => setMinorProjects(data))
-      .catch((err) => console.error("Error fetching projects:", err));
-  }, []);
   return (
     <div id="projects">
       <SectionHeader sectionName="Major Projects" />
       <div id="major-projects-container" className="container">
         {majorProjects.map((project) => (
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" key={project.id}>
             <div>
               <img
                 src={project.projectImage}
@@ -37,14 +25,28 @@ export default function Projects() {
               </p>
               <p className="projectDescription">{project.projectDescription}</p>
               <div className="project-btns">
-                <a href={project.projectLiveUrl} className="live-btn" target="_blank" rel="noreferrer">
-                  Live &nbsp;
-                  <i class="fa-brands fa-hive"></i>
-                </a>
-                <a href={project.projectGitRepo} className="github-btn" target="_blank" rel="noreferrer">
-                  Repo &nbsp;
-                  <i class="fa-solid fa-code-branch"></i>
-                </a>
+                {project.projectLiveUrl && (
+                  <a
+                    href={project.projectLiveUrl}
+                    className="live-btn"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live &nbsp;
+                    <i className="fa-brands fa-hive"></i>
+                  </a>
+                )}
+                {project.projectGitRepo && (
+                  <a
+                    href={project.projectGitRepo}
+                    className="github-btn"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Repo &nbsp;
+                    <i className="fa-solid fa-code-branch"></i>
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -53,7 +55,7 @@ export default function Projects() {
       <SectionHeader sectionName="Minor Projects" />
       <div id="minor-projects-container" className="container">
         {minorProjects.map((project) => (
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" key={project.id}>
             <div className="minor-project-used-technologies">
               {project.usedTechnologies}
             </div>

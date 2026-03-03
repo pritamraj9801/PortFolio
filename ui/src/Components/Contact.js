@@ -4,7 +4,6 @@ export default function Contact() {
     <>
       <SectionHeader sectionName="Contacts" />
       <div id="contact" className='container' data-aos="fade-up">
-        {/* <RectangularDots rows="5" cols="2" class="contactRectDot" /> */}
         <div>
           <p>
             I’m interested in freelance opportunities. However, if you have
@@ -14,7 +13,7 @@ export default function Contact() {
         <div id='message-me-box'>
           <p>Message Me here</p>
           <p>
-            <i class="fa-solid fa-inbox"></i>
+            <i className="fa-solid fa-inbox"></i>
             &nbsp;
             <span>pritamraj9801@gmail.com</span>
           </p>

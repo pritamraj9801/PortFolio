@@ -1,7 +1,6 @@
 import RectangularDots from "./RectangularDots";
 import RectangleBox from "./RectangleBox";
 import DivLock from "./DivLock";
-import { useState } from "react";
 export default function SkillsLeftDesign() {
   return (
     <div>

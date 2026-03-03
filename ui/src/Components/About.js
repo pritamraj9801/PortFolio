@@ -40,14 +40,14 @@ export default function About() {
               download="Your_Resume.pdf"
             >
               Download Resume &nbsp;
-              <i class="fa-solid fa-download"></i>
+              <i className="fa-solid fa-download"></i>
             </a>
           </button>
         </div>
         <div id="aboutImage">
- <RectangularDots rows="4" cols="4" class="aboutRectangleBox1" />
- <RectangularDots rows="4" cols="4" class="aboutRectangleBox2"/>
- <RectangularDots rows="4" cols="4" class="aboutRectangleBox3"/>
+          <RectangularDots rows="4" cols="4" classNameProp="aboutRectangleBox1" />
+          <RectangularDots rows="4" cols="4" classNameProp="aboutRectangleBox2" />
+          <RectangularDots rows="4" cols="4" classNameProp="aboutRectangleBox3" />
         </div>
       </div>
     </>
